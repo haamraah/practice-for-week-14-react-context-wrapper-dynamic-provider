@@ -7,7 +7,7 @@ const Detail = () => {
   return (
     <div className="details">
       <img src={sign.backgroundImg} alt={sign.name} />
-      <h2>Current Sign Name : {sign.name}</h2>
+      <h2>Current Sign Name is : {sign.name}</h2>
       <h4>Element: {sign.element} </h4>
       <h4>Traits: {sign.traits}</h4>
       <Match />
