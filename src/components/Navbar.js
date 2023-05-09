@@ -1,11 +1,16 @@
-import horoscopeObj from '../data/horoscopes';
-
+import horoscopeObj from "../data/horoscopes";
+import { useContext } from "react";
+import { HoroscopeContext } from "../context/HoroscopeContext";
 const Navbar = () => {
+  console.log("Navbar rendered");
+  const { setCurrentSign } = useContext(HoroscopeContext);
   const horoscopes = Object.keys(horoscopeObj);
   return (
     <nav>
-      {horoscopes.map(sign => (
-        <span key={sign}>{sign}</span>
+      {horoscopes.map((sign) => (
+        <span onClick={() => setCurrentSign(sign)} key={sign}>
+          {sign}
+        </span>
       ))}
     </nav>
   );
